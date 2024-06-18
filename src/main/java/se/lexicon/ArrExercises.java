@@ -1,6 +1,7 @@
 package se.lexicon;
 
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 
 public class ArrExercises {
     public static void main(String[] args) {
@@ -54,7 +55,6 @@ public class ArrExercises {
             for (int j = 0; j < board[i].length; j++) {
                 System.out.print(board[i][j] + "\t");
             }
-            System.out.println("\n");
         }
     }
 
@@ -78,8 +78,18 @@ public class ArrExercises {
     }
 
     public static void ex8() {
-        int[] array = {20, 20, 40, 20, 30, 40, 50, 60};
-        System.out.println("Array: " + Arrays.toString(array));
+        Integer[] numbers = new Integer[]{20, 20, 40, 20, 30, 40, 50, 60};
+        System.out.println("Array: " + Arrays.toString(numbers));
+
+        LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>(Arrays.asList(numbers));
+
+        Integer[] numbersWithoutDuplicates = linkedHashSet.toArray(new Integer[0]);
+
+        System.out.println(Arrays.toString(numbersWithoutDuplicates));
+    }
+
+    public static void ex9() {
+
     }
 }
 
